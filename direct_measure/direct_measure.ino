@@ -1,7 +1,7 @@
 /*
   Resistance Measurements
 
-      Use the resistive divider to calculate the unknow resistor.
+      Use the resistive divider to calculate the unknown resistor.
 
   Created 18 Oct. 2019
   by Yi-Xuan Wang
