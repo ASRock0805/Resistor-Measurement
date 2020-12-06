@@ -1,7 +1,7 @@
 /*
   Resistance Measurements w/ Moving Average Filtering
 
-      Use the resistive divider to calculate the unknow resistor, and
+      Use the resistive divider to calculate the unknown resistor, and
   use moving average filter to smooth the value.
 
   Created 1 Nov. 2019
