@@ -34,23 +34,9 @@ float vOut;                 // Output of the ADC
 float unkR;                 // Unknown resistor
 
 /*--- Function Prototype ---*/
-void unitR(float );
 void setup(void);
 void loop(void);
-
-/*--- Functions Definition ---*/
-// Unit converter for resistor
-void unitR(float r) {
-  if (r >= pow(10.0, 6.0)) {                          // 10^6 Ohm
-    r = r / pow(10.0, 6.0);
-    Serial.print(r, 2);
-    Serial.println("M Ohm");
-  } else if ((r >= pow(10.0, 3.0)) || (r < pow(10.0, 6.0))) { // 10^3 Ohm
-    r = r / pow(10.0, 3.0);
-    Serial.print(r, 2);
-    Serial.println("K Ohm");
-  }
-}
+void unitR(float );
 
 /*--- Initialization ---*/
 void setup(void) {
@@ -84,5 +70,19 @@ void loop(void) {
     startTime = currentTime;
   } else {
     return;
+  }
+}
+
+/*--- Functions Definition ---*/
+// Unit converter for resistor
+void unitR(float r) {
+  if (r >= pow(10.0, 6.0)) {                          // 10^6 Ohm
+    r = r / pow(10.0, 6.0);
+    Serial.print(r, 2);
+    Serial.println("M Ohm");
+  } else if ((r >= pow(10.0, 3.0)) || (r < pow(10.0, 6.0))) { // 10^3 Ohm
+    r = r / pow(10.0, 3.0);
+    Serial.print(r, 2);
+    Serial.println("K Ohm");
   }
 }
